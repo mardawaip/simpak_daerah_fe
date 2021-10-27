@@ -18,7 +18,7 @@ const marks = [
 
 function AdjustFontSize(props) {
   const [anchorEl, setAnchorEl] = useState(null);
-  const [fontSize, setFontSize] = useState(1);
+  const [fontSize, setFontSize] = useState(0.9);
 
   function changeHtmlFontSize() {
     const html = document.getElementsByTagName('html')[0];

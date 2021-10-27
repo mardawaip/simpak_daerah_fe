@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 // import Auth0LoginTab from './tabs/Auth0LoginTab';
 // import FirebaseLoginTab from './tabs/FirebaseLoginTab';
 import JWTLoginTab from './tabs/JWTLoginTab';
+import appConfig from 'app/fuse-configs/appConfig';
 
 const Root = styled('div')(({ theme }) => ({
   background: `linear-gradient(to right, ${theme.palette.primary.dark} 0%, ${darken(
@@ -53,17 +54,17 @@ function Login() {
               animate={{ opacity: 1, transition: { delay: 0.2 } }}
             >
               <div className="flex items-center mb-48">
-                <img className="logo-icon w-48" src="assets/images/logos/fuse.svg" alt="logo" />
+                <img className="logo-icon w-48" src={ appConfig.app.logo } alt="logo" />
                 <div className="border-l-1 mr-4 w-1 h-40" />
                 <div>
                   <Typography className="text-24 font-semibold logo-text" color="inherit">
-                    FUSE
+                    { appConfig.app.judul_apikasi }
                   </Typography>
                   <Typography
                     className="text-16 tracking-widest -mt-8 font-700"
                     color="textSecondary"
                   >
-                    REACT
+                    { appConfig.app.nama_wilayah }
                   </Typography>
                 </div>
               </div>
@@ -119,14 +120,14 @@ function Login() {
         </Card>
 
         <div className="Login-rightSection hidden md:flex flex-1 items-center justify-center p-64">
-          <div className="max-w-320">
+          <div className="max-w-330">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
             >
               <Typography variant="h3" color="inherit" className="font-semibold leading-tight">
-                Welcome <br />
-                to the <br /> FUSE React!
+                Selamat Datang <br />
+                <br /> Web Aplikasi { appConfig.app.judul_apikasi }
               </Typography>
             </motion.div>
 
@@ -135,8 +136,8 @@ function Login() {
               animate={{ opacity: 1, transition: { delay: 0.3 } }}
             >
               <Typography variant="subtitle1" color="inherit" className="mt-32">
-                Powerful and professional admin template for Web Applications, CRM, CMS, Admin
-                Panels and more.
+                { appConfig.app.sub_judul_aplikasi }.
+                { appConfig.app.client }
               </Typography>
             </motion.div>
           </div>

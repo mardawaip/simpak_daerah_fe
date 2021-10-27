@@ -4,10 +4,12 @@ import ExampleConfig from 'app/main/example/ExampleConfig';
 import FuseLoading from '@fuse/core/FuseLoading';
 import Error404Page from 'app/main/404/Error404Page';
 import LoginConfig from 'app/main/login/LoginConfig';
+import LandingPageConfig from 'app/main/landingPage/LandingPageConfig';
 
 const routeConfigs = [
+  LandingPageConfig,
   ExampleConfig,
-  LoginConfig
+  LoginConfig,
 ];
 
 const routes = [
