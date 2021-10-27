@@ -1,3 +1,4 @@
+import { authRoles } from 'app/auth';
 import i18next from 'i18next';
 import ar from './navigation-i18n/ar';
 import en from './navigation-i18n/en';
@@ -22,6 +23,14 @@ const navigationConfig = [
         type: 'item',
         icon: 'whatshot',
         url: '/example',
+      },
+      {
+        id: 'login',
+        title: 'Login',
+        type: 'item',
+        url: '/login',
+        auth: authRoles.onlyGuest,
+        icon: 'lock',
       },
     ],
   },

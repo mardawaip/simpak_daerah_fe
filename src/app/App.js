@@ -11,12 +11,13 @@ import { CacheProvider } from '@emotion/react';
 import { selectCurrLangDir } from 'app/store/i18nSlice';
 import withAppProviders from './withAppProviders';
 import { Auth } from './auth';
+import appConfig from './fuse-configs/appConfig';
+import axios from 'axios';
 
-// import axios from 'axios';
 /**
  * Axios HTTP Request defaults
  */
-// axios.defaults.baseURL = "";
+axios.defaults.baseURL = appConfig.app.backend;
 // axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 // axios.defaults.headers.common['Content-Type'] = 'application/x-www-form-urlencoded';
 
