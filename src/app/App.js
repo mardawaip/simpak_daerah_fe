@@ -21,6 +21,15 @@ axios.defaults.baseURL = appConfig.app.backend;
 // axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 // axios.defaults.headers.common['Content-Type'] = 'application/x-www-form-urlencoded';
 
+if(!localStorage.getItem('jwt_access_token')){
+  const linkWithOutAuth = appConfig.app.linkWithOutAuth;
+  const link = window.location.pathname.split('/')[1];
+
+  if(!linkWithOutAuth.includes(link)){
+    window.location.href = "/landingpage";
+  }
+}
+
 const emotionCacheOptions = {
   rtl: {
     key: 'muirtl',

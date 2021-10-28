@@ -16,14 +16,14 @@ const navigationConfig = [
     type: 'group',
     icon: 'apps',
     children: [
-      {
-        id: 'example-component',
-        title: 'Example',
-        translate: 'EXAMPLE',
-        type: 'item',
-        icon: 'whatshot',
-        url: '/example',
-      },
+      // {
+      //   id: 'example-component',
+      //   title: 'Example',
+      //   translate: 'EXAMPLE',
+      //   type: 'item',
+      //   icon: 'whatshot',
+      //   url: '/example',
+      // },
       {
         id: 'login',
         title: 'Login',

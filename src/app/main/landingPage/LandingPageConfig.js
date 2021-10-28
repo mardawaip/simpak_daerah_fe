@@ -1,4 +1,8 @@
 import LandingPage from './LandingPage';
+import ExamplePage from '../example/Example';
+// import { useSelector } from 'react-redux';
+
+// const user = useSelector(({ auth }) => auth.user);
 
 const LandingPageConfig = {
   settings: {
@@ -24,8 +28,9 @@ const LandingPageConfig = {
   },
   routes: [
     {
-      path: '/home',
-      component: LandingPage,
+      path: '/landingpage',
+      // component: (user.role ? ExamplePage : LandingPage),
+      component: LandingPage
     },
   ],
 };

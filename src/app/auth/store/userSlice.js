@@ -9,6 +9,7 @@ import { showMessage } from 'app/store/fuse/messageSlice';
 import auth0Service from 'app/services/auth0Service';
 import firebaseService from 'app/services/firebaseService';
 import jwtService from 'app/services/jwtService';
+import { setNavigation } from 'app/store/fuse/navigationSlice';
 
 export const setUserDataAuth0 = (tokenData) => async (dispatch) => {
   const user = {
@@ -87,6 +88,7 @@ export const setUserData = (user) => async (dispatch, getState) => {
     Set User Settings
      */
   dispatch(setDefaultSettings(user.data.settings));
+  dispatch(setNavigation(user.data.settings.menu));
 
   dispatch(setUser(user));
 };

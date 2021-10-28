@@ -121,6 +121,7 @@ class JwtService extends FuseUtils.EventEmitter {
 
   logout = () => {
     this.setSession(null);
+    window.location.href = "/login";
   };
 
   isAuthTokenValid = (access_token) => {

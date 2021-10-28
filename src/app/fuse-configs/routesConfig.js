@@ -5,12 +5,16 @@ import FuseLoading from '@fuse/core/FuseLoading';
 import Error404Page from 'app/main/404/Error404Page';
 import LoginConfig from 'app/main/login/LoginConfig';
 import LandingPageConfig from 'app/main/landingPage/LandingPageConfig';
+import BerandaConfig from 'app/main/pages/beranda/BerandaConfig';
 
 const routeConfigs = [
   LandingPageConfig,
   ExampleConfig,
   LoginConfig,
+  BerandaConfig
 ];
+
+const link = !localStorage.getItem('jwt_access_token') ? '/landingpage' : '/beranda';
 
 const routes = [
   // if you want to make whole app auth protected by default change defaultAuth for example:
@@ -20,7 +24,7 @@ const routes = [
   {
     exact: true,
     path: '/',
-    component: () => <Redirect to="/home" />,
+    component: () => <Redirect to={link} />,
   },
   {
     path: '/loading',

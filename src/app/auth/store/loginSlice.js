@@ -11,6 +11,7 @@ export const submitLogin =
       .signInWithEmailAndPassword(email, password)
       .then((user) => {
         dispatch(setUserData(user));
+        window.location.href = "/beranda";
 
         return dispatch(loginSuccess());
       })
