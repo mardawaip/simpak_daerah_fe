@@ -2,6 +2,7 @@ import DemoContent from '@fuse/core/DemoContent';
 import { styled } from '@mui/material/styles';
 import FusePageSimple from '@fuse/core/FusePageSimple';
 import { useTranslation } from 'react-i18next';
+import ProgresRaport from 'app/main/widgets/ProgresRaport';
 
 const Root = styled(FusePageSimple)({
   '& .FusePageSimple-header': {},
@@ -16,18 +17,19 @@ function Beranda(props) {
 
   return (
     <Root
-      header={
-        <div className="p-24">
-          <h4>{t('TITLE')}</h4>
-        </div>
-      }
-      contentToolbar={
-        <div className="px-24">
-          <h4>Beranda</h4>
-        </div>
-      }
+      // header={
+      //   <div className="p-24">
+      //     <h4>{t('TITLE')}</h4>
+      //   </div>
+      // }
+      // contentToolbar={
+      //   <div className="px-24">
+      //     <h4>Beranda</h4>
+      //   </div>
+      // }
       content={
         <div className="p-24">
+          <ProgresRaport/>
           <h4>Content</h4>
           <br />
           <DemoContent />

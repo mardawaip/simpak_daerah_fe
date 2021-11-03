@@ -21,7 +21,7 @@ axios.defaults.baseURL = appConfig.app.backend;
 // axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 // axios.defaults.headers.common['Content-Type'] = 'application/x-www-form-urlencoded';
 
-if(!localStorage.getItem('jwt_access_token')){
+if(!localStorage.getItem('jwt_access_token_simdik')){
   const linkWithOutAuth = appConfig.app.linkWithOutAuth;
   const link = window.location.pathname.split('/')[1];
 

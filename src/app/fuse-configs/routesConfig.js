@@ -14,7 +14,7 @@ const routeConfigs = [
   BerandaConfig
 ];
 
-const link = !localStorage.getItem('jwt_access_token') ? '/landingpage' : '/beranda';
+const link = !localStorage.getItem('jwt_access_token_simdik') ? '/landingpage' : '/beranda';
 
 const routes = [
   // if you want to make whole app auth protected by default change defaultAuth for example:
